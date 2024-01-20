@@ -28,5 +28,13 @@ or
 
 
 ```ps1
-Get-ChildItem -Recurse -Filter "2023*.md" 2023-11 | ./markdown-to-dayone.ps1
+Get-ChildItem -Recurse -Filter "2023*.md" 2023-11 | Sort-Object |  ./markdown-to-dayone.ps1
 ```
+
+## Troubleshooting
+
+```
+Error: Invalid value(s) for option -a, --attachments; -p, --photos: path/to/attachment.jpg
+```
+
+The attachment could not be found. Check the path in the md file is correct, relative to the current working directory.
